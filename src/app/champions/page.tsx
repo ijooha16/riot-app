@@ -1,12 +1,9 @@
 import ChampionCard from "@/components/cards/ChampionCard";
 import { Champion } from "@/types/Champion";
+import { fetchChampionList } from "@/utils/serverApi";
 
 const ChampionPage = async () => {
-  const res = await fetch(
-    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json"
-  );
-  const data = await res.json();
-  const champions: Champion[] = Object.values(data.data);
+  const champions: Champion[] = await fetchChampionList();
 
   return (
     <div>

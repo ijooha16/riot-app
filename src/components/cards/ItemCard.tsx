@@ -1,7 +1,7 @@
-import { ItemProps } from "@/types/Item";
+import { Item } from "@/types/Item";
 import Image from "next/image";
 
-const ItemCard = ({ item }: ItemProps) => {
+const ItemCard = ({ item }: {item: Item}) => {
   console.log(item);
 
   return (

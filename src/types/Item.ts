@@ -14,7 +14,3 @@ export type Item = {
   };
   tags: string[];
 };
-
-export type ItemProps = {
-  item: Item;
-};
