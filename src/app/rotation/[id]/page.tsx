@@ -4,18 +4,6 @@ import { ChampionDetail } from "@/types/Champion";
 import Background from "@/components/detail-page/Background";
 import CharacterInfo from "@/components/detail-page/CharacterInfo";
 import SpellCard from "@/components/detail-page/SpellCard";
-import { Metadata } from "next";
-
-export const generateMetadata = async ({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> => {
-  return {
-    title: `${params.id}-detail`,
-    description: "매주 바뀌는 무료 챔피언을 확인하세요!",
-  };
-};
 
 const ChampionDetailPage = async ({ params }: Props) => {
   const data: ChampionDetail[] = await fetchChampionDetail(params.id);

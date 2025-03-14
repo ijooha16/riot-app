@@ -9,7 +9,7 @@ const ChampionPage = async () => {
     <div>
       <div className="grid grid-cols-3 gap-6">
         {champions.map((champion) => (
-          <ChampionCard champion={champion} />
+          <ChampionCard page='champions' champion={champion} />
         ))}
       </div>
     </div>

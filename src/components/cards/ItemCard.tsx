@@ -5,7 +5,7 @@ const ItemCard = ({ item }: {item: Item}) => {
   console.log(item);
 
   return (
-    <div className="w-[300px] p-6 flex flex-col items-center border-2 rounded-md">
+    <div className="p-6 flex flex-col items-center border-2 rounded-md">
       <Image
         src={`https://ddragon.leagueoflegends.com/cdn/15.5.1/img/item/${item.image.full}`}
         alt={item.name}
