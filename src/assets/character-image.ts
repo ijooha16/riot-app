@@ -13,3 +13,7 @@ export const championImg = (championId: string): string => {
 export const splashImg = (championId: string): string => {
   return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championId}_0.jpg`;
 };
+
+export const itemImg = (url: string): string => {
+  return `https://ddragon.leagueoflegends.com/cdn/15.5.1/img/item/${url}`
+}
