@@ -28,7 +28,6 @@ export interface ChampionDetail extends Champion {
   enemytips: string[];
   spells: Spell[];
   passive: Passive;
-  recommended: any[];
 }
 
 export interface Skin {

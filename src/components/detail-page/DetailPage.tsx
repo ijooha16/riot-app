@@ -17,12 +17,9 @@ const DetailPage = async ({ params }: Props) => {
 
         <div className="grid grid-cols-4 gap-8">
           {champion.spells.map((spell) => (
-            <SpellCard spell={spell} />
+            <SpellCard key={spell.id} spell={spell} />
           ))}
         </div>
-        <br />
-        <br />
-        {JSON.stringify(champion)}
       </div>
     </div>
   );
