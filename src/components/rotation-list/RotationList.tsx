@@ -16,12 +16,8 @@ const RotationList = () => {
     <div>
       <div className="grid grid-cols-3 gap-6">
         {rotation?.map((champion) => (
-          <Suspense fallback={<Loading />}>
-            <ChampionCard
-              key={champion.id}
-              page="rotation"
-              champion={champion}
-            />
+          <Suspense key={champion.id} fallback={<Loading />}>
+            <ChampionCard page="rotation" champion={champion} />
           </Suspense>
         ))}
       </div>
