@@ -2,7 +2,6 @@ import { Item } from "@/types/Item";
 import Image from "next/image";
 
 const ItemCard = ({ item }: {item: Item}) => {
-  console.log(item);
 
   return (
     <div className="p-6 flex flex-col items-center border-2 rounded-md">
