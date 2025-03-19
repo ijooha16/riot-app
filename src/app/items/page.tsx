@@ -9,7 +9,7 @@ const ItemsPage = async () => {
 
   return (
     <div>
-      <div className="grid grid-cols-5 gap-6">
+      <div className="grid grid-cols-4 gap-6">
         {items.map((item) => (
           <Suspense key={item.name} fallback={<Loading />}>
             <ItemCard item={item} />

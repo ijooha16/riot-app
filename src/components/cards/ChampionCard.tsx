@@ -19,8 +19,8 @@ const ChampionCard = ({
           width={300}
           height={200}
         />
-        <div>{champion.name}</div>
-        <div>{champion.title}</div>
+        <div className="text-red-500 font-bold">{champion.name}</div>
+        <div className="text-gray-400">{champion.title}</div>
       </div>
     </Link>
   );
