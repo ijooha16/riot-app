@@ -1,37 +1,4 @@
-export type Champion = {
-  id: string;
-  key: string;
-  name: string;
-  title: string;
-  blurb: string;
-  info: ChampionInfo;
-  image: ChampionImage;
-  tags: string[];
-  partype: string;
-  stats: ChampionStats;
-};
-
-export type ChampionDetail = {
-  id: string;
-  key: string;
-  name: string;
-  title: string;
-  image: ChampionImage;
-  skins: Skin[];
-  lore: string;
-  blurb: string;
-  allytips: string[];
-  enemytips: string[];
-  tags: string[];
-  partype: string;
-  info: ChampionInfo;
-  stats: ChampionStats;
-  spells: Spell[];
-  passive: Passive;
-  recommended: any[];
-};
-
-export type ChampionImage = {
+export interface ImageBase {
   full: string;
   sprite: string;
   group: string;
@@ -39,23 +6,46 @@ export type ChampionImage = {
   y: number;
   w: number;
   h: number;
-};
+}
 
-export type Skin = {
+export interface Champion {
+  id: string;
+  key: string;
+  name: string;
+  title: string;
+  blurb: string;
+  info: ChampionInfo;
+  image: ImageBase;
+  tags: string[];
+  partype: string;
+  stats: ChampionStats;
+}
+
+export interface ChampionDetail extends Champion {
+  skins: Skin[];
+  lore: string;
+  allytips: string[];
+  enemytips: string[];
+  spells: Spell[];
+  passive: Passive;
+  recommended: any[];
+}
+
+export interface Skin {
   id: string;
   num: number;
   name: string;
   chromas: boolean;
-};
+}
 
-export type ChampionInfo = {
+export interface ChampionInfo {
   attack: number;
   defense: number;
   magic: number;
   difficulty: number;
-};
+}
 
-export type ChampionStats = {
+export interface ChampionStats {
   hp: number;
   hpperlevel: number;
   mp: number;
@@ -76,9 +66,9 @@ export type ChampionStats = {
   attackdamageperlevel: number;
   attackspeedperlevel: number;
   attackspeed: number;
-};
+}
 
-export type Spell = {
+export interface Spell {
   id: string;
   name: string;
   description: string;
@@ -95,37 +85,17 @@ export type Spell = {
   maxammo: string;
   range: number[];
   rangeBurn: string;
-  image: SpellImage;
+  image: ImageBase;
   resource: string;
-};
+}
 
-export type Leveltip = {
+export interface Leveltip {
   label: string[];
   effect: string[];
-};
+}
 
-export type SpellImage = {
-  full: string;
-  sprite: string;
-  group: string;
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-};
-
-export type Passive = {
+export interface Passive {
   name: string;
   description: string;
-  image: PassiveImage;
-};
-
-export type PassiveImage = {
-  full: string;
-  sprite: string;
-  group: string;
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-};
+  image: ImageBase;
+}

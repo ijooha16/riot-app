@@ -10,8 +10,6 @@ const ChampionCard = ({
   champion: Champion;
   page: string;
 }) => {
-  console.log(champion);
-
   return (
     <Link href={`/${page}/${champion.id}`}>
       <div className="p-6 flex flex-col items-center">

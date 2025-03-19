@@ -33,7 +33,7 @@ export default function RootLayout({
         <QueryProvider>
           <Header />
           <div className="flex justify-center w-full">
-            <div className="flex items-center justify-center mt-[120px] w-[800px]">
+            <div className="h-[cal(screen-120px)] flex items-center justify-center mt-[120px] w-[800px]">
               {children}
             </div>
           </div>

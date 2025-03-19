@@ -1,3 +1,4 @@
+import { splashImg } from "@/assets/character-image";
 import { ChampionDetail } from "@/types/Champion";
 
 const Background = ({ champion }: { champion: ChampionDetail }) => {
@@ -5,7 +6,7 @@ const Background = ({ champion }: { champion: ChampionDetail }) => {
     <div
       className="z-0 bg-cover bg-center w-full aspect-[16/9] fixed left-0 "
       style={{
-        backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg)`,
+        backgroundImage: `url(${splashImg(champion.id)})`,
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
